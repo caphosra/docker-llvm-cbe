@@ -1,14 +1,12 @@
 FROM alpine:3.11
 
-ARG LLVM_FILE_VERSION
-
 #############################################
 #
 # Settings
 #
 #############################################
-ENV LLVM_ARCHIVE llvm-${LLVM_FILE_VERSION}.src.tar.xz
-ENV LLVM_DOWNLOAD_URL https://github.com/llvm/llvm-project/releases/download/llvmorg-${LLVM_FILE_VERSION}/${LLVM_ARCHIVE}
+ENV LLVM_ARCHIVE llvm-8.0.0.src.tar.xz
+ENV LLVM_DOWNLOAD_URL http://releases.llvm.org/8.0.0/llvm-8.0.0.src.tar.xz
 ENV LLVM_CBE_DOWNLOAD_URL https://github.com/JuliaComputing/llvm-cbe.git
 
 WORKDIR /

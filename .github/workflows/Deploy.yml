@@ -17,4 +17,3 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: capra314cabra/llvm-cbe
           tags: latest
-          build_args: LLVM_FILE_VERSION=8.0.0
