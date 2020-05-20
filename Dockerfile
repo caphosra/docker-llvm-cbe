@@ -5,7 +5,6 @@ FROM alpine:3.11
 # Settings
 #
 #############################################
-ENV LLVM_ARCHIVE llvm-8.0.0.src.tar.xz
 ENV LLVM_DOWNLOAD_URL http://releases.llvm.org/8.0.0/llvm-8.0.0.src.tar.xz
 ENV LLVM_CBE_DOWNLOAD_URL https://github.com/JuliaComputing/llvm-cbe.git
 
@@ -38,8 +37,8 @@ RUN \
     && mkdir -p /tmp \
     && cd /tmp \
     && wget ${LLVM_DOWNLOAD_URL} \
-    && tar xJf ${LLVM_ARCHIVE} \
-    && mv /tmp/llvm-${LLVM_FILE_VERSION}.src /tmp/llvm \
+    && tar xJf llvm-8.0.0.src.tar.xz \
+    && mv /tmp/llvm-8.0.0.src /tmp/llvm \
 #############################################
 #
 # Download LLVM-CBE sources
